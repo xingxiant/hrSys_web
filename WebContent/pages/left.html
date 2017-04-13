@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/left.css">
+</head>
+<body>
+<div>
+    <p id="welcome">欢迎，xxx</p>
+</div>
+<div id="nav">
+    <ul class="nav nav-stacked">
+        <li><a href="#collapseOne" data-toggle="collapse"><span class="glyphicon glyphicon-user"></span>我的信息</a></li>
+        <div id="collapseOne" class="collapse">
+            <ul class="nav nav-stacked">
+                <li><a href="./table.html" target="mainWindow">查看信息</a></li>
+                <li><a href="./change.html" target="mainWindow">修改信息</a></li>
+            </ul>
+        </div>
+        <li><a href="#collapseTwo" data-toggle="collapse"><span class="glyphicon glyphicon-home"></span>我的部门</a></li>
+        <div id="collapseTwo" class="collapse">
+            <ul class="nav nav-stacked">
+                <li><a href="./list.html" target="mainWindow">部门人员</a></li>
+                <li><a href="./change.html" target="mainWindow">添加人员</a></li>
+                <li><a href="./list.html" target="mainWindow">岗位介绍</a></li>
+            </ul>
+        </div>
+        <li><a href="#collapseThree" data-toggle="collapse"><span class="glyphicon glyphicon-th-list"></span>公司信息</a></li>
+        <div id="collapseThree" class="collapse">
+            <ul class="nav nav-stacked">
+                <li><a href="./list.html" target="mainWindow">人员总览</a></li>
+                <li><a href="./list.html" target="mainWindow">部门介绍</a></li>
+            </ul>
+        </div>
+        <li><a href="../login.html" target="_parent"><span class="glyphicon glyphicon-log-out"></span>退出</a></li>
+    </ul>
+</div>
+
+<script src="../js/jquery-2.1.4.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

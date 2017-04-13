@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改信息</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/change.css">
+</head>
+<body>
+<div id="form">
+    <p id="start">修改信息</p>
+    <form role="form" method="post" action="#">
+        <div class="input-group">
+            <span class="input-group-addon">姓名</span>
+            <input type="text" class="form-control inputType" placeholder="姓名" name="">
+        </div>
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon">密码</span>
+            <input type="password" class="form-control inputType" placeholder="密码" name="">
+        </div>
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon">性别</span>
+            <select class="form-control inputType" name="">
+                <option selected="selected">男</option>
+                <option>女</option>
+            </select>
+        </div>
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon">年龄</span>
+            <input type="text" class="form-control inputType" placeholder="年龄" name="">
+        </div>
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon">电话</span>
+            <input type="text" class="form-control inputType" placeholder="电话" name="">
+        </div>
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon">电子邮箱</span>
+            <input type="text" class="form-control inputType" placeholder="电子邮箱" name="">
+        </div>
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon">通信地址</span>
+            <input type="text" class="form-control inputType" placeholder="通信地址" name="">
+        </div>
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon">教育程度</span>
+            <select class="form-control inputType" name="">
+                <option selected="selected">本科</option>
+                <option>专科</option>
+                <option>博士</option>
+                <option>硕士</option>
+            </select>
+        </div>
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon">英语水平</span>
+            <select class="form-control inputType" name="">
+                <option selected="selected">四级</option>
+                <option>六级</option>
+                <option>八级</option>
+            </select>
+        </div>
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon">部门</span>
+            <select class="form-control inputType" name="">
+                <option selected="selected">部门1</option>
+                <option>部门2</option>
+                <option>部门3</option>
+                <option>部门4</option>
+            </select>
+        </div>
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon">部门电话</span>
+            <input type="text" class="form-control inputType" placeholder="部门电话" name="cdTel">
+        </div>
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon">职位</span>
+            <select class="form-control inputType" name="">
+                <option selected="selected">职位1</option>
+                <option>职位2</option>
+                <option>职位3</option>
+                <option>职位4</option>
+            </select>
+        </div>
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon">毕业学校</span>
+            <input type="text" class="form-control inputType" placeholder="毕业学校" name="">
+        </div>
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon">专业</span>
+            <input type="text" class="form-control inputType" placeholder="专业" name="">
+        </div>
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon">毕业时间</span>
+            <input type="text" class="form-control inputType" placeholder="毕业时间" name="">
+        </div>
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon">入职时间</span>
+            <input type="text" class="form-control inputType" placeholder="入职时间" name="">
+        </div>
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon">婚姻状况</span>
+            <select class="form-control inputType" name="" id="isMar">
+                <option selected="selected">未婚</option>
+                <option>已婚</option>
+            </select>
+        </div>
+        <div id="marridList">
+            <br>
+            <div class="input-group">
+                <span class="input-group-addon">配偶姓名</span>
+                <input type="text" class="form-control inputType" placeholder="配偶姓名" name="">
+            </div>
+            <br>
+            <div class="input-group">
+                <span class="input-group-addon">配偶年龄</span>
+                <input type="text" class="form-control inputType" placeholder="配偶年龄" name="">
+            </div>
+            <br>
+            <div class="input-group">
+                <span class="input-group-addon">配偶电话</span>
+                <input type="text" class="form-control inputType" placeholder="配偶联系方式" name="">
+            </div>
+            <br>
+            <div class="input-group">
+                <span class="input-group-addon">配偶职业</span>
+                <input type="text" class="form-control inputType" placeholder="配偶职业" name="">
+            </div>
+        </div>
+        <br><br>
+        <div class="input-group">
+            <input id="subBtn" type="submit" class="form-control btn-primary" value="提交">
+        </div>
+    </form>
+</div>
+<script type="text/javascript">
+    window.onload = function () {
+        var isMarried = document.getElementById("isMar");
+        var marridList = document.getElementById("marridList");
+        var isMarVlu = isMarried.selectedIndex;
+        if (isMarVlu == 0) {
+            marridList.style.display = "none";
+        } else {
+            marridList.style.display = "block";
+        }
+        isMarried.onchange = function () {
+            isMarVlu = isMarried.selectedIndex;
+            if (isMarVlu == 0) {
+                marridList.style.display = "none";
+            } else {
+                marridList.style.display = "block";
+            }
+        };
+    }
+</script>
+</body>
+</html>
